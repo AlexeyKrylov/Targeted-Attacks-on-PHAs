@@ -1,0 +1,214 @@
+{
+  "allowed_attacks": [
+    "nes",
+    "prokos",
+    "nes_attack_v0",
+    "simba",
+    "zo_signsgd",
+    "atkscopes"
+  ],
+  "configs": {
+    "neuralhash": {
+      "atkscopes": {
+        "a": 39.27,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "eps": 8.243022130911872e-09,
+        "lr": 7.87538012764693,
+        "max_freq": 8,
+        "max_iters": 10000,
+        "scale": "global"
+      },
+      "nes": {
+        "lr": 0.0915,
+        "max_iters": 500,
+        "n_samples": 20,
+        "sigma": 0.2548
+      },
+      "nes_attack_v0": {
+        "grayscale_noise": true,
+        "lr": 43.29,
+        "max_iters": 500,
+        "momentum": 0.5,
+        "n_samples": 20,
+        "sigma": 0.252
+      },
+      "prokos": {
+        "antithetic": true,
+        "grayscale_noise": true,
+        "lr": 13.14,
+        "max_iters": 500,
+        "momentum": 0.5,
+        "n_samples": 20,
+        "sigma": 0.068
+      },
+      "simba": {
+        "epsilon": 74.36,
+        "freq_dims": 16,
+        "max_iters": 8000,
+        "stride": 1
+      },
+      "zo_signsgd": {
+        "direction_dist": "gaussian",
+        "estimator": "central",
+        "eval_updated_point": true,
+        "lr": 0.04,
+        "max_iters": 606,
+        "mu": 0.134,
+        "q": 20
+      }
+    },
+    "pdq": {
+      "atkscopes": {
+        "a": 1.5,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "eps": 1e-08,
+        "lr": 1.0,
+        "max_freq": 16,
+        "scale": "global"
+      },
+      "nes": {
+        "lr": 0.01,
+        "n_samples": 20,
+        "sigma": 0.5
+      },
+      "nes_attack_v0": {
+        "grayscale_noise": true,
+        "lr": 10.0,
+        "momentum": 0.5,
+        "n_samples": 20,
+        "sigma": 0.5
+      },
+      "prokos": {
+        "antithetic": true,
+        "grayscale_noise": true,
+        "lr": 38.0413,
+        "momentum": 0.5,
+        "n_samples": 80,
+        "sigma": 0.337847
+      },
+      "simba": {
+        "epsilon": 30,
+        "freq_dims": 10,
+        "stride": 1
+      },
+      "zo_signsgd": {
+        "direction_dist": "gaussian",
+        "estimator": "central",
+        "eval_updated_point": true,
+        "lr": 0.047058823529411764,
+        "mu": 0.06274509803921569,
+        "q": 16
+      }
+    },
+    "phash": {
+      "atkscopes": {
+        "a": 10.0,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "eps": 1e-08,
+        "lr": 3.0,
+        "max_freq": 8,
+        "scale": "global"
+      },
+      "nes": {
+        "lr": 0.365293,
+        "n_samples": 10,
+        "sigma": 2.05614
+      },
+      "nes_attack_v0": {
+        "grayscale_noise": true,
+        "lr": 62.4215,
+        "momentum": 0.362809,
+        "n_samples": 40,
+        "sigma": 1.22485
+      },
+      "prokos": {
+        "antithetic": true,
+        "grayscale_noise": true,
+        "lr": 68.843,
+        "momentum": 0.458142,
+        "n_samples": 40,
+        "sigma": 0.796176
+      },
+      "simba": {
+        "epsilon": 128.552,
+        "freq_dims": 1,
+        "stride": 4
+      },
+      "zo_signsgd": {
+        "direction_dist": "gaussian",
+        "estimator": "majority",
+        "eval_updated_point": true,
+        "lr": 0.153814,
+        "mu": 0.132892,
+        "q": 8
+      }
+    },
+    "photodna": {
+      "atkscopes": {
+        "a": 6.2764,
+        "beta1": 0.9,
+        "beta2": 0.999,
+        "lr": 5.05876,
+        "max_freq": 4,
+        "patch_size": 128,
+        "scale": "mid"
+      },
+      "nes": {
+        "lr": 0.00160683,
+        "n_samples": 20,
+        "sigma": 0.802123
+      },
+      "nes_attack_v0": {
+        "grayscale_noise": true,
+        "lr": 35.834,
+        "momentum": 0.74104,
+        "n_samples": 40,
+        "sigma": 0.215094
+      },
+      "prokos": {
+        "antithetic": true,
+        "grayscale_noise": true,
+        "lr": 17.2725,
+        "momentum": 0.660901,
+        "n_samples": 40,
+        "sigma": 0.420121
+      },
+      "simba": {
+        "epsilon": 18.1709,
+        "freq_dims": 8,
+        "stride": 1
+      },
+      "zo_signsgd": {
+        "direction_dist": "gaussian",
+        "estimator": "majority",
+        "eval_updated_point": true,
+        "lr": 0.100121,
+        "mu": 0.0128307,
+        "q": 64
+      }
+    }
+  },
+  "defaults": {
+    "budget": 10000,
+    "seed": 0
+  },
+  "hashes": [
+    "pdq",
+    "phash",
+    "neuralhash",
+    "photodna"
+  ],
+  "preprocess": {
+    "resize_resample": "bilinear",
+    "resize_size": 256
+  },
+  "thresholds": {
+    "pdq": 92.0,
+    "phash": 12.0,
+    "photodna": 3855.0,
+    "neuralhash": 17.0
+  }
+}

@@ -1,0 +1,66 @@
+# Python/cache artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv*/
+.env
+.env.*
+!.env.example
+.claude/
+
+# Local notebooks and experiment artifacts
+*.ipynb
+# ...except the curated example notebook of each stage (keep them output-free).
+!stage2_optimize/optimize.ipynb
+!stage2_optimize/NeuralHash_optimize.ipynb
+!stage3_openevolve/OpenEvolve.ipynb
+!stage3_gigaevolve/GigaEvolve.ipynb
+!stage4_benchmark/Benchmark.ipynb
+defense/
+docs/
+experiments/
+figures/
+notebooks/
+outputs/
+runs_sweep/
+openevolve_checkpoint_legacy/
+stage1_find_ASR/results/
+
+# Local datasets / generated reports
+data/*
+*.zip
+!data/dataset_v1_public.zip
+!data/dataset_v1_full.zip
+*.xlsx
+*.csv
+
+# LaTeX build artifacts
+thesis/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+
+# Results are local by default; keep only the curated attack config.
+results/*
+!results/
+!results/attack_configs.json
+!results/attack_configs_optimized.json
+
+# Vendored/checked-out third-party repositories are handled separately.
+third_party/*
+!third_party/README.md
+!third_party/*.patch
+
+# Proprietary hash binaries are not redistributed; see README ("Hash binaries").
+hashes/dll/
+hashes/model/
